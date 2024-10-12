@@ -51,7 +51,7 @@ def main():
       for message in messages:
             publish_message_to_sns(message)
             log_message_to_s3(message)
-            sleep(10)
+            
 
 if __name__ == "__main__":
     main()
