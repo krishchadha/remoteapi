@@ -1,6 +1,7 @@
 import requests
 import boto3
 from datetime import datetime
+from time import sleep
 
 sns_client = boto3.client('sns', region_name='ap-south-1')
 s3_client = boto3.client('s3')
@@ -45,10 +46,12 @@ def log_message_to_s3(message):
 
 
 def main():
-    messages = fetch_messages_from_api()
-    for message in messages:
-        publish_message_to_sns(message)
-        log_message_to_s3(message)
+    while True:
+        messages = fetch_messages_from_api()
+        for message in messages:
+            publish_message_to_sns(message)
+            log_message_to_s3(message)
+            sleep(60)
 
 if __name__ == "__main__":
     main()
