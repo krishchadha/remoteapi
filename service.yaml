@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: krishapp-service
+spec:
+  selector:
+    app: krishapp
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
