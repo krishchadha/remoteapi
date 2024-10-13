@@ -1,7 +1,7 @@
 import requests
 import boto3
 from datetime import datetime
-from time import sleep
+import time
 
 sns_client = boto3.client('sns', region_name='ap-south-1')
 s3_client = boto3.client('s3')
