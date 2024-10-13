@@ -10,8 +10,14 @@
 7. S3 bucket for logging
 8. Automation
 
+## Github Repo:
+- https://github.com/krishchadha/remoteapi
+
 ## Overview:
 A Multi-environment application deployment using AWS, Docker (ECR), Kubernetes (EKS), and ArgoCD for CI/CD.
+
+1. **SNS topic and SQS Queue**
+
 
 
 
