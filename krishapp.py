@@ -1,7 +1,7 @@
 import requests
 import boto3
 from datetime import datetime
-from time import sleep
+import time
 
 sns_client = boto3.client('sns', region_name='ap-south-1')
 s3_client = boto3.client('s3')
@@ -40,9 +40,9 @@ def log_message_to_s3(message):
             Key=log_file_name,
             Body=str(message)
         )
-        print("saved S3")
+        print("Saved on S3")
     except Exception as e:
-        print("Failed S3")
+        print("Failed on S3")
 
 
 def main():
@@ -51,6 +51,7 @@ def main():
       for message in messages:
             publish_message_to_sns(message)
             log_message_to_s3(message)
+            time.sleep(1)
             
 
 if __name__ == "__main__":
