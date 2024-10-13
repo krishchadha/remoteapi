@@ -40,7 +40,7 @@ def log_message_to_s3(message):
             Key=log_file_name,
             Body=str(message)
         )
-        print("Saved on the S3")
+        print("Saved on S3")
     except Exception as e:
         print("Failed on S3")
 
