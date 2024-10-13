@@ -18,3 +18,10 @@ A Multi-environment application deployment using AWS, Docker (ECR), Kubernetes (
 
 1. **SNS topic and SQS Queue**
 ![Screenshot 2024-10-13 095548](https://github.com/user-attachments/assets/42a298ba-9eef-4c20-86e1-5281bd8518f6)
+![image](https://github.com/user-attachments/assets/16cb5afa-b813-460b-bef8-24535368ddc9)
+
+2. RDS with PostgreSQL
+![image](https://github.com/user-attachments/assets/d95b1ed1-65dc-4453-a008-dc74c3ff25ec)
+
+3. Lambda to connect with RDS (triggered by SQS)
+![image](https://github.com/user-attachments/assets/71d78402-67cf-4c53-a813-c250dc91c5ca)
