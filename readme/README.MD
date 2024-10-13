@@ -26,7 +26,7 @@ A Multi-environment application deployment using AWS, Docker (ECR), Kubernetes (
 
 3. Lambda to connect with RDS (triggered by SQS)
 
-- Github: https://github.com/krishchadha/lambdawithrdspostgres
+- **Github**: https://github.com/krishchadha/lambdawithrdspostgres
 
 ![image](https://github.com/user-attachments/assets/71d78402-67cf-4c53-a813-c250dc91c5ca)
 
