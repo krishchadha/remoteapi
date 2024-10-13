@@ -48,3 +48,18 @@ Github: https://github.com/krishchadha/lambdawithrdspostgres
 -- Different for staging and production environment:
 
 ![image](https://github.com/user-attachments/assets/74dd7cfc-44d6-4409-a6b2-7b2d8fc4f7b7)
+![image](https://github.com/user-attachments/assets/07aa969a-7e60-43c1-bdfb-eab69d835ce9)
+
+7. S3 bucket for logging
+
+![image](https://github.com/user-attachments/assets/601162fe-4d94-4507-b397-ba44fa77c13e)
+![image](https://github.com/user-attachments/assets/664b4895-0271-4137-a5d1-7d29e355915f)
+
+8. Automation
+
+![image](https://github.com/user-attachments/assets/420eb090-95a2-4590-8a29-da9ded30387b)
+![Screenshot 2024-10-13 085059](https://github.com/user-attachments/assets/6517b52e-8a95-4219-8cd2-c596ffb745f0)
+
+## Testing
+
+
