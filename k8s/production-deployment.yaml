@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krishapp
+  namespace: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: krishapp
+  template:
+    metadata:
+      labels:
+        app: krishapp
+    spec:
+      containers:
+      - name: krishapp
+        image: 980921721207.dkr.ecr.ap-south-1.amazonaws.com/krishapp:latest
+        ports:
+        - containerPort: 80
