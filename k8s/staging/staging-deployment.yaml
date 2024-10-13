@@ -18,3 +18,10 @@ spec:
         image: 980921721207.dkr.ecr.ap-south-1.amazonaws.com/krishapp:latest
         ports:
         - containerPort: 80
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "1Gi"
+    cpu: "1"
