@@ -68,4 +68,8 @@ aws sns publish --region ap-south-1 --topic-arn arn:aws:sns:ap-south-1:980921721
 
 ![image](https://github.com/user-attachments/assets/0c733a93-3bdc-4358-a345-2c16abf7533a)
 
+- Lambda LOGs:
 ![image](https://github.com/user-attachments/assets/f15e41e7-e532-4e89-90ea-592757b489e4)
+
+Cloudwatch:
+![image](https://github.com/user-attachments/assets/1095fc26-833b-4d48-9a53-d00a311a439e)
