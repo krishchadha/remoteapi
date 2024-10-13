@@ -1,6 +1,6 @@
 # Multi-Environment Application Deployment and Event-Driven Architecture Setup
 
-![Screenshot 2024-10-13 201306](https://github.com/user-attachments/assets/33dec011-6729-44eb-82c1-2d762b754097)
+![image](https://github.com/user-attachments/assets/40ac1eed-fac5-4fa4-8559-5ce975e99af7)
 
 ## Achievements:
 1. SNS topic and SQS Queue
