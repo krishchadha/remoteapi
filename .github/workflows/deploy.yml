@@ -13,18 +13,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up kubectl
-        run: |
-          curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-          chmod +x ./kubectl
-          sudo mv ./kubectl /usr/local/bin/kubectl
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Install ArgoCD CLI
+      - name: Build Docker Image
         run: |
-          curl -sSL -o argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
-          chmod +x argocd
-          sudo mv argocd /usr/local/bin/
+          docker build -t krishapp .
+          docker tag krishapp:latest ${{ secrets.ECR_REPOSITORY_URI }}:latest
 
-      - name: Deploy Application with ArgoCD
+      - name: Login to ECR
         run: |
-          argocd app sync my-app
+          aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY_URI }}
+
+      - name: Push to ECR
+        run: |
+          docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
+
+      - name: Update Kubernetes Deployment
+        run: |
+          kubectl set image deployment/krishapp krishapp=${{ secrets.ECR_REPOSITORY_URI }}:latest -n staging
