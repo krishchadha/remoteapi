@@ -33,6 +33,6 @@ jobs:
         run: |
           docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
 
-      - name: Update Kubernetes Deployment
-        run: |
-          kubectl set image deployment/krishapp krishapp=${{ secrets.ECR_REPOSITORY_URI }}:latest -n staging
+      # - name: Update Kubernetes Deployment
+      #   run: |
+      #     kubectl set image deployment/krishapp krishapp=${{ secrets.ECR_REPOSITORY_URI }}:latest -n staging
