@@ -61,9 +61,11 @@ Github: https://github.com/krishchadha/lambdawithrdspostgres
 ![Screenshot 2024-10-13 085059](https://github.com/user-attachments/assets/6517b52e-8a95-4219-8cd2-c596ffb745f0)
 
 ## Testing
+
 ```bash
 aws sns publish --region ap-south-1 --topic-arn arn:aws:sns:ap-south-1:980921721207:krish-sns-topic --message "Lambda test"
 ```
+
 ![image](https://github.com/user-attachments/assets/0c733a93-3bdc-4358-a345-2c16abf7533a)
-![image](https://github.com/user-attachments/assets/f93baccb-ee54-48cd-84cc-ebfca172874d)
+
 ![image](https://github.com/user-attachments/assets/f15e41e7-e532-4e89-90ea-592757b489e4)
