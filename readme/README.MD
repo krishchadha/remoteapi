@@ -17,3 +17,4 @@
 A Multi-environment application deployment using AWS, Docker (ECR), Kubernetes (EKS), and ArgoCD for CI/CD.
 
 1. **SNS topic and SQS Queue**
+![Screenshot 2024-10-13 095548](https://github.com/user-attachments/assets/42a298ba-9eef-4c20-86e1-5281bd8518f6)
