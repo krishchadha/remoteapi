@@ -45,5 +45,6 @@ Github: https://github.com/krishchadha/lambdawithrdspostgres
 - EKS:
 ![image](https://github.com/user-attachments/assets/10aa7b8e-63db-4bf8-82ee-ea2a3d443161)
 
-- - Different for staging and production environment:
+-- Different for staging and production environment:
+
 ![image](https://github.com/user-attachments/assets/74dd7cfc-44d6-4409-a6b2-7b2d8fc4f7b7)
